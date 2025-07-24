@@ -4,8 +4,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="flex flex-col justify-between min-h-screen overflow-hidden
-      bg-slate-900">
+    <div className="flex flex-col justify-between min-h-screen overflow-hidden">
           <Home/>
           <About/>
           <Footer/>
