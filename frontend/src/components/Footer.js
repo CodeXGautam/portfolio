@@ -6,7 +6,7 @@ import { BiLogoGmail } from "react-icons/bi";
 
 const Footer = () =>{
     return(
-        <div className="flex justify-center items-center gap-8 bg-bgColor p-5">
+        <div className="flex justify-center items-center gap-8 bg-bgColor p-5 mt-20">
             <NavLink to='https://github.com/CodeXGautam'
             target="blank">
                 <FaGithub className="text-3xl cursor-pointer hover:text-slate-100
