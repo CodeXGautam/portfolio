@@ -1,4 +1,5 @@
 import Footer from "./components/Footer";
+import About from "./pages/About";
 import Home from "./pages/Home";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="flex flex-col justify-between min-h-screen overflow-hidden
       bg-slate-900">
           <Home/>
+          <About/>
           <Footer/>
     </div>
   );
