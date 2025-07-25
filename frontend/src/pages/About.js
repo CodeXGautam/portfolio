@@ -14,7 +14,8 @@ const About = () => {
                 I'm always learning and experimenting with new technologies to build better solutions.
             </div>
 
-            <div className="bg-yellow-200 flex flex-col gap-5 justify-around p-5 -rotate-6 w-[100%]">
+            <div className="bg-yellow-200 flex flex-col gap-5 justify-around p-5 -rotate-6 w-[100%] shadow-lg
+             shadow-black">
                 <h1 className="flex flex-col justify-center items-center text-xl text-amber-700 font-semibold font-display
             sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-4xl">
                     Skills
