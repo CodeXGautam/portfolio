@@ -9,22 +9,22 @@ const projects = [
         title: "Vocintera",
         projectImg: vocinteraImg,
         description: "A voice enabled AI powered mock interview platform",
-        gitUrl: "",
-        liveUrl: "",
+        gitUrl: "https://github.com/CodeXGautam/Vocintera",
+        liveUrl: "https://vocintera.onrender.com/",
     },
     {
         title: "RouteWizard",
         projectImg: routewizImg,
         description: "An intelligent ml powered route optimization platform",
-        gitUrl: "",
-        liveUrl: "",
+        gitUrl: "https://github.com/CodeXGautam/routewiz",
+        liveUrl: "https://routewiz.onrender.com/",
     },
     {
         title: "Mail Tracker Pro",
         projectImg: mailImg,
         description: "A firefox extension which tracks emails in real time and updates on a user dashboard",
-        gitUrl: "",
-        liveUrl: "",
+        gitUrl: "https://github.com/CodeXGautam/mail-tracker",
+        liveUrl: "https://addons.mozilla.org/addon/mail-tracker-pro/",
     },
 ]
 
