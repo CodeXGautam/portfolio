@@ -30,10 +30,11 @@ const Experience = () => {
                     </div>
                     {/* Card */}
                     <div className="w-full sm:w-1/2 pl-0 sm:pl-8 mt-4 sm:mt-0">
-                        <div className="bg-white rounded-xl shadow-lg p-6 max-w-md border-l-4 border-amber-500 mx-auto sm:mx-0">
-                            <h3 className="text-xl font-bold text-amber-800">Internship : GoBiggie</h3>
+                        <div className="bg-white flex flex-col gap-2 rounded-xl shadow-lg p-6 max-w-md border-l-4 border-amber-500 mx-auto sm:mx-0">
+                            <h3 className="text-xl font-bold text-amber-800">SDE Intern at FlairX </h3>
                             <p className="text-sm text-amber-700 font-semibold">Role: Full Stack Developer</p>
-                            <p className="text-gray-700">Worked on building user interfaces and improving user experience for the main product. Contributed to several key features and collaborated with a cross-functional team.</p>
+                            <p className="text-gray-700">  Currently working on backend APIs and database optimization. 
+                                Learning new technologies and contributing to ongoing projects.</p>
                         </div>
                     </div>
                 </div>
@@ -54,10 +55,11 @@ const Experience = () => {
                     </div>
                     {/* Card */}
                     <div className="w-full sm:w-1/2 pr-0 sm:pr-8 mt-4 sm:mt-0 flex justify-end">
-                        <div className="bg-white rounded-xl shadow-lg p-6 max-w-md border-r-4 border-amber-500 mx-auto sm:mx-0">
-                            <h3 className="text-xl font-bold text-amber-800">SDE Intern at FlairX</h3>
+                        <div className="bg-white flex flex-col gap-2 rounded-xl shadow-lg p-6 max-w-md border-r-4 border-amber-500 mx-auto sm:mx-0">
+                            <h3 className="text-xl font-bold text-amber-800">Internship : GoBiggie</h3>
                             <p className="text-sm text-amber-700 font-semibold">Role: Full Stack Developer</p>
-                            <p className="text-gray-700">Currently working on backend APIs and database optimization. Learning new technologies and contributing to ongoing projects.</p>
+                            <p className="text-gray-700">Worked on building user interfaces and improving user experience for the main product. 
+                                Contributed to several key features and collaborated with a cross-functional team.</p>
                         </div>
                     </div>
                 </div>
