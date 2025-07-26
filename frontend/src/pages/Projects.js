@@ -1,7 +1,6 @@
 import vocinteraImg from '../images/landingPage.png';
 import routewizImg from '../images/welcome_page.png';
 import mailImg from '../images/dashboard.png';
-import ProjectCard from '../components/ProjectCard';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
 
