@@ -130,7 +130,7 @@ const Home = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <a 
-                                href="https://drive.google.com/file/d/YOUR_RESUME_FILE_ID/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1g2B2lsVNOIjYAMKHdTel7Db3rENB-6m5/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-4 bg-gradient-to-r from-[#7C5E3C] to-[#B48A4A] text-[#FAF7F2] font-semibold rounded-2xl shadow-lg border-2 border-[#E9E4DA] cursor-pointer transition-all duration-300 group-hover:from-[#B48A4A] group-hover:to-[#7C5E3C] group-hover:shadow-xl inline-block"
@@ -239,7 +239,7 @@ const Home = () => {
                             whileTap={{ scale: 0.98 }}
                         >
                             <a 
-                                href="https://drive.google.com/file/d/YOUR_RESUME_FILE_ID/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1g2B2lsVNOIjYAMKHdTel7Db3rENB-6m5/view?usp=drive_link"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-6 py-3 bg-gradient-to-r from-[#7C5E3C] to-[#B48A4A] text-[#FAF7F2] font-semibold rounded-xl shadow-lg border-2 border-[#E9E4DA] cursor-pointer transition-all duration-300 group-hover:from-[#B48A4A] group-hover:to-[#7C5E3C] group-hover:shadow-xl text-center inline-block"
