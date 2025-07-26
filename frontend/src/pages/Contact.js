@@ -44,7 +44,7 @@ const Contact = () =>{
                 </div>
                 <button type="submit"
                     className="mt-4 bg-gradient-to-r from-[#F6E7C1] via-[#F3E3B6] to-[#E9E4DA] hover:from-[#F3E3B6] hover:to-[#F6E7C1] text-[#7C5E3C] font-bold py-3 px-8 rounded-full shadow-xl transition-all duration-200 transform hover:-translate-y-1 hover:scale-105 text-lg font-display tracking-wide border-2 border-[#E9E4DA] animate-bounce-slow">
-                    Send Message 🚀
+                    Send Message 
                 </button>
                 {/* Decorative bottom border */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-2/3 h-2 bg-[#E9E4DA] rounded-full blur-sm opacity-60"></div>
