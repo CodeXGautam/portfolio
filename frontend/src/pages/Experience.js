@@ -44,7 +44,7 @@ const Experience = () => {
                     {/* Timeline label (date) */}
                     <div className="w-full sm:w-1/2 flex justify-start pl-2 sm:pl-8 mb-2 sm:mb-0">
                         <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold shadow-md whitespace-nowrap">
-                            Jan 2024 - Mar 2024
+                            Dec 2024 - Feb 2025
                         </span>
                     </div>
                     {/* Dot and line */}
