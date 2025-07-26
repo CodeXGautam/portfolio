@@ -18,7 +18,7 @@ const Experience = () => {
                     {/* Timeline label (date) */}
                     <div className="w-full sm:w-1/2 flex justify-end pr-2 sm:pr-8 mb-2 sm:mb-0">
                         <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold shadow-md whitespace-nowrap">
-                            Jan 2024 - Mar 2024
+                            July 2025 - Present
                         </span>
                     </div>
                     {/* Dot and line */}
@@ -33,7 +33,7 @@ const Experience = () => {
                         <div className="bg-white flex flex-col gap-2 rounded-xl shadow-lg p-6 max-w-md border-l-4 border-amber-500 mx-auto sm:mx-0">
                             <h3 className="text-xl font-bold text-amber-800">SDE Intern at FlairX </h3>
                             <p className="text-sm text-amber-700 font-semibold">Role: Full Stack Developer</p>
-                            <p className="text-gray-700">  Currently working on backend APIs and database optimization. 
+                            <p className="text-gray-700">  Currently working on backend APIs and database optimization.
                                 Learning new technologies and contributing to ongoing projects.</p>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ const Experience = () => {
                     {/* Timeline label (date) */}
                     <div className="w-full sm:w-1/2 flex justify-start pl-2 sm:pl-8 mb-2 sm:mb-0">
                         <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full text-xs font-semibold shadow-md whitespace-nowrap">
-                            July 2025 - Present
+                            Jan 2024 - Mar 2024
                         </span>
                     </div>
                     {/* Dot and line */}
@@ -58,7 +58,7 @@ const Experience = () => {
                         <div className="bg-white flex flex-col gap-2 rounded-xl shadow-lg p-6 max-w-md border-r-4 border-amber-500 mx-auto sm:mx-0">
                             <h3 className="text-xl font-bold text-amber-800">Internship : GoBiggie</h3>
                             <p className="text-sm text-amber-700 font-semibold">Role: Full Stack Developer</p>
-                            <p className="text-gray-700">Worked on building user interfaces and improving user experience for the main product. 
+                            <p className="text-gray-700">Worked on building user interfaces and improving user experience for the main product.
                                 Contributed to several key features and collaborated with a cross-functional team.</p>
                         </div>
                     </div>
