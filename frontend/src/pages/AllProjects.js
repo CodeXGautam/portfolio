@@ -72,7 +72,7 @@ const AllProjects = () => {
 
             {/* Navigation Header */}
             <motion.div 
-                className="relative z-10 bg-white/80 backdrop-blur-sm border-b-2 border-amber-200 sticky top-0"
+                className="z-[1000] sticky top-0 bg-white/80 backdrop-blur-sm border-b-2 border-amber-200"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
