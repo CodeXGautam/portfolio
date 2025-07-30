@@ -26,7 +26,7 @@ const Contact = () => {
         toast.loading('Sending message...');
 
         try {
-            const response = await fetch('http://localhost:4000/contact', {
+            const response = await fetch('https://portfolio-backend-6ti0.onrender.com/contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
