@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -9,8 +10,6 @@ const Contact = () => {
         email: '',
         message: ''
     });
-    const [status, setStatus] = useState('');
-
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -20,7 +19,11 @@ const Contact = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        setStatus('Sending...');
+        if(formData.name === '' || formData.email === '' || formData.message === ''){
+            toast.error('All fields are required.');
+            return;
+        }
+        toast.loading('Sending message...');
 
         try {
             const response = await fetch('http://localhost:4000/contact', {
@@ -32,19 +35,21 @@ const Contact = () => {
             });
 
             const data = await response.json();
+            toast.dismiss(); // Dismiss the loading toast
 
             if (response.ok) {
-                setStatus('Message sent successfully!');
+                toast.success('Message sent successfully!');
                 setFormData({
                     name: '',
                     email: '',
                     message: ''
                 });
             } else {
-                setStatus(`Failed to send message: ${data.message || response.statusText}`);
+                toast.error(`Failed to send message: ${data.message || response.statusText}`);
             }
         } catch (error) {
-            setStatus('Error sending message. Please try again later.');
+            toast.dismiss(); // Dismiss the loading toast
+            toast.error('Error sending message. Please try again later.');
             console.error('Error:', error);
         }
     };
@@ -92,7 +97,7 @@ const Contact = () => {
                 </div>
                 {/* Enhanced Form Fields */}
                 <div className="relative">
-                    <input type="text" id="name" name="name" required value={formData.name}
+                    <input type="text" id="name" name="name" value={formData.name}
                         onChange={handleChange}
                         className="peer w-full border-b-2 border-[#E9E4DA] dark:border-dark-border-primary bg-transparent py-3 px-2 text-[#7C5E3C] dark:text-dark-text-primary font-body focus:outline-none focus:border-[#B48A4A] dark:focus:border-dark-warm-primary transition-all duration-500 placeholder-transparent rounded-t-xl"
                         placeholder="Your Name" />
@@ -101,7 +106,7 @@ const Contact = () => {
                     </label>
                 </div>
                 <div className="relative">
-                    <input type="email" id="email" name="email" required value={formData.email}
+                    <input type="email" id="email" name="email" value={formData.email}
                         onChange={handleChange}
                         className="peer w-full border-b-2 border-[#E9E4DA] dark:border-dark-border-primary bg-transparent py-3 px-2 text-[#7C5E3C] dark:text-dark-text-primary font-body focus:outline-none focus:border-[#B48A4A] dark:focus:border-dark-warm-primary transition-all duration-500 placeholder-transparent rounded-t-xl"
                         placeholder="Your Email" />
@@ -110,7 +115,7 @@ const Contact = () => {
                     </label>
                 </div>
                 <div className="relative">
-                    <textarea id="message" name="message" required rows="4" value={formData.message}
+                    <textarea id="message" name="message" rows="4" value={formData.message}
                         onChange={handleChange}
                         className="peer w-full border-b-2 border-[#E9E4DA] dark:border-dark-border-primary bg-transparent py-3 px-2 text-[#7C5E3C] dark:text-dark-text-primary font-body focus:outline-none focus:border-[#B48A4A] dark:focus:border-dark-warm-primary transition-all duration-500 resize-none placeholder-transparent rounded-t-xl"
                         placeholder="Your Message"></textarea>
@@ -123,15 +128,14 @@ const Contact = () => {
                     className="mt-4 bg-gradient-to-r from-[#F6E7C1] via-[#F3E3B6] to-[#E9E4DA] dark:from-dark-warm-primary dark:via-dark-warm-secondary dark:to-dark-warm-tertiary hover:from-[#F3E3B6] hover:to-[#F6E7C1] dark:hover:from-dark-warm-secondary dark:hover:to-dark-warm-primary text-[#7C5E3C] dark:text-dark-text-primary font-bold py-3 px-8 rounded-full shadow-xl dark:shadow-dark-warm transition-all duration-500 transform hover:-translate-y-1 hover:scale-105 text-lg font-display tracking-wide border-2 border-[#E9E4DA] dark:border-dark-border-accent/30"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    disabled={status === 'Sending...'}
                 >
-                    {status === 'Sending...' ? 'Sending...' : 'Send Message ✨'}
+                    Send Message ✨
                 </motion.button>
-                {status && <p className="text-center mt-4 text-sm font-body text-[#7C5E3C] dark:text-dark-text-primary transition-colors duration-500">{status}</p>}
                 {/* Enhanced decorative bottom border */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-2/3 h-2 bg-[#E9E4DA] dark:bg-dark-warm-primary/30 rounded-full blur-sm opacity-60 dark:opacity-40 transition-all duration-500"></div>
             </motion.form>
             {/* Creative Contact Form End */}
+            <Toaster />
         </div>
     )
 }

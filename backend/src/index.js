@@ -1,8 +1,27 @@
+import 'dotenv/config';
 import express from 'express';
+import cors from 'cors';
 
 const app = express();
 
 const PORT = 4000; 
+
+app.use(cors({
+  origin:['http://localhost:3000'],
+  credentials: true,
+  exposedHeaders: ['set-cookie']
+}));
+
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Expose-Headers', 'set-cookie');
+  next();
+});
+          
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 app.listen(PORT,()=>{
     console.log(`app is listening at ${PORT}`)
@@ -20,13 +39,13 @@ const contactController = async (req, res) => {
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-                user: 'YOUR_EMAIL@gmail.com', // replace with your email
-                pass: 'YOUR_APP_PASSWORD' // replace with your app password
+                user: process.env.MAIL_USER,
+                pass: process.env.MAIL_PASS
             }
         });
         const mailOptions = {
-            from: email,
-            to: 'YOUR_EMAIL@gmail.com', // replace with your email
+            from: process.env.MAIL_USER,
+            to: process.env.MAIL_USER_RECEIVER, // replace with your email
             subject: `Portfolio Contact Form: ${name}`,
             text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
         };
