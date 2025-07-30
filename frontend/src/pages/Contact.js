@@ -1,8 +1,9 @@
 
 
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const Contact = () =>{
+
     return(
             <div className="flex flex-col items-center gap-20 mt-20 justify-center min-h-screen
              mx-auto w-[65%] max-w-[750px] min-w-[270px] relative overflow-hidden transition-all duration-500" id="contact">
@@ -32,7 +33,7 @@ const Contact = () =>{
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                onSubmit={e => { e.preventDefault(); /* handle form submission here */ }}
+                onSubmit={submitHandler}
             >
                 {/* Enhanced Envelope Icon */}
                 <div className="flex justify-center mb-2">
