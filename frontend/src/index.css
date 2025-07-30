@@ -4,13 +4,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
 
-
+/* Enhanced body styling with smooth transitions */
 body {
      background-color: #F8F5F2;
      /* Paper color */
      background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23d4d0c9" fill-opacity="0.3"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+     color: #4a4a4a;
 }
 
+/* Enhanced Dark mode styles - same pattern but darker */
+.dark body {
+     background-color: #1a1a1a;
+     color: #f5f5f5;
+     /* Same pattern as light mode but with darker colors and warm accent hints */
+     background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f59e0b" fill-opacity="0.08"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+/* Typography enhancements */
 .font-display {
      font-family: 'Kalam', cursive;
 }
@@ -21,4 +32,166 @@ body {
 
 .no-scrollbar::-webkit-scrollbar {
      display: none;
+}
+
+/* Enhanced scrollbar styling for dark mode */
+::-webkit-scrollbar {
+     width: 8px;
+}
+
+::-webkit-scrollbar-track {
+     background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+     background: #B48A4A;
+     border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+     background: #7C5E3C;
+}
+
+.dark ::-webkit-scrollbar-track {
+     background: #1a1a1a;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+     background: #f59e0b;
+     border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+     background: #d97706;
+}
+
+/* Enhanced utility classes for consistent dark mode theming */
+@layer utilities {
+  /* Background utilities */
+  .dark-bg-primary {
+    @apply dark:bg-dark-bg-primary;
+  }
+  
+  .dark-bg-secondary {
+    @apply dark:bg-dark-bg-secondary;
+  }
+  
+  .dark-bg-surface {
+    @apply dark:bg-dark-surface-primary;
+  }
+  
+  .dark-bg-elevated {
+    @apply dark:bg-dark-surface-secondary;
+  }
+  
+  /* Text utilities */
+  .dark-text-primary {
+    @apply dark:text-dark-text-primary;
+  }
+  
+  .dark-text-secondary {
+    @apply dark:text-dark-text-secondary;
+  }
+  
+  .dark-text-muted {
+    @apply dark:text-dark-text-muted;
+  }
+  
+  .dark-text-accent {
+    @apply dark:text-dark-text-accent;
+  }
+  
+  /* Border utilities */
+  .dark-border-primary {
+    @apply dark:border-dark-border-primary;
+  }
+  
+  .dark-border-secondary {
+    @apply dark:border-dark-border-secondary;
+  }
+  
+  .dark-border-accent {
+    @apply dark:border-dark-border-accent;
+  }
+  
+  /* Shadow utilities */
+  .dark-shadow-sm {
+    @apply dark:shadow-dark-sm;
+  }
+  
+  .dark-shadow-md {
+    @apply dark:shadow-dark-md;
+  }
+  
+  .dark-shadow-lg {
+    @apply dark:shadow-dark-lg;
+  }
+  
+  .dark-shadow-warm {
+    @apply dark:shadow-dark-warm;
+  }
+  
+  /* Gradient utilities */
+  .dark-gradient-primary {
+    @apply dark:bg-dark-gradient-primary;
+  }
+  
+  .dark-gradient-secondary {
+    @apply dark:bg-dark-gradient-secondary;
+  }
+  
+  .dark-gradient-warm {
+    @apply dark:bg-dark-gradient-warm;
+  }
+  
+  /* Hover effects */
+  .dark-hover-surface {
+    @apply dark:hover:bg-dark-surface-hover;
+  }
+  
+  /* Creative glow effects for dark mode */
+  .dark-glow-warm {
+    @apply dark:shadow-dark-warm;
+  }
+  
+  .dark-glow-accent {
+    @apply dark:shadow-[0_0_20px_rgba(245,158,11,0.3)];
+  }
+}
+
+/* Custom animations for enhanced user experience */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(245, 158, 11, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.8), 0 0 30px rgba(217, 119, 6, 0.6); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Enhanced focus states for accessibility */
+.focus-visible:focus {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+.dark .focus-visible:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
