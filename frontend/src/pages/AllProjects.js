@@ -1,6 +1,7 @@
 import vocinteraImg from '../images/landingPage.png';
 import routewizImg from '../images/welcome_page.png';
 import mailImg from '../images/dashboard.png';
+import chatbotImg from '../images/chatbot.png';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
 
@@ -27,6 +28,15 @@ const allProjects = [
     },
     {
         id: '3',
+        title: "ChatBot",
+        projectImg: chatbotImg, 
+        description: "This web app is built with React.js and styled using Tailwind CSS. It leverages the GEMINI API to handle user queries—users can simply enter their questions, and the app fetches responses through the API.",
+        gitUrl: "https://github.com/CodeXGautam/Chatbot",
+        liveUrl: "https://codexgautam.github.io/Chatbot/",
+        tech: ["React","TailWind CSS", "Google Gemini", "Rest Api"]
+    },
+    {
+        id: '4',
         title: "Mail Tracker Pro",
         projectImg: mailImg,
         description: "A Firefox extension that tracks emails in real time and provides detailed analytics on a comprehensive user dashboard.",
@@ -34,15 +44,7 @@ const allProjects = [
         liveUrl: "https://addons.mozilla.org/addon/mail-tracker-pro/",
         tech: ["Firefox Extension", "JavaScript", "Dashboard", "Real-time Analytics"]
     },
-    {
-        id: '4',
-        title: "ChatBot",
-        projectImg: vocinteraImg, // Using placeholder image
-        description: "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-        gitUrl: "https://github.com/CodeXGautam/Chatbot",
-        liveUrl: "https://codexgautam.github.io/Chatbot/",
-        tech: ["React","TailWind CSS", "Google Gemini", "Rest Api"]
-    },
+    
     // {
     //     id: '5',
     //     title: "Task Management System",
