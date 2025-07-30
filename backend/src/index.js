@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT; 
 
 app.use(cors({
-  origin:['https://portfolio-backend-6ti0.onrender.com','http://localhost:3000'],
+  origin:['http://localhost:3000', 'https://portfolio-6m89.onrender.com'],
   credentials: true,
   exposedHeaders: ['set-cookie']
 }));
