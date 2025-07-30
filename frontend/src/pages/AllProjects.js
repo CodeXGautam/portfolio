@@ -13,7 +13,8 @@ const allProjects = [
         description: "A voice enabled AI powered mock interview platform that helps users practice interviews with real-time feedback and analysis.",
         gitUrl: "https://github.com/CodeXGautam/Vocintera",
         liveUrl: "https://vocintera.onrender.com/",
-        tech: ["React", "Node.js", "AI", "Voice Recognition", "MongoDB"]
+        tech: ["React", "Node.js","Express", "Google GEN AI", "OpenRouter AI", "Web Speech Api", "MongoDB"
+            ,"Tailwind CSS"]
     },
     {
         id: '2',
@@ -22,7 +23,7 @@ const allProjects = [
         description: "An intelligent machine learning powered route optimization platform that finds the most efficient paths for delivery and travel.",
         gitUrl: "https://github.com/CodeXGautam/routewiz",
         liveUrl: "https://routewiz.onrender.com/",
-        tech: ["ML", "Python", "React", "Optimization", "Maps API"]
+        tech: ["React", "Node.js", "Django", "MongoDb", "Express","Nginx"]
     },
     {
         id: '3',
@@ -35,31 +36,31 @@ const allProjects = [
     },
     {
         id: '4',
-        title: "E-Commerce Platform",
+        title: "ChatBot",
         projectImg: vocinteraImg, // Using placeholder image
         description: "A full-stack e-commerce solution with payment integration, inventory management, and admin dashboard.",
-        gitUrl: "https://github.com/CodeXGautam/ecommerce",
-        liveUrl: "#",
-        tech: ["React", "Node.js", "MongoDB", "Stripe", "Redux"]
+        gitUrl: "https://github.com/CodeXGautam/Chatbot",
+        liveUrl: "https://codexgautam.github.io/Chatbot/",
+        tech: ["React","TailWind CSS", "Google Gemini", "Rest Api"]
     },
-    {
-        id: '5',
-        title: "Task Management System",
-        projectImg: routewizImg, // Using placeholder image
-        description: "A collaborative task management application with real-time updates, team collaboration, and project tracking.",
-        gitUrl: "https://github.com/CodeXGautam/taskmanager",
-        liveUrl: "#",
-        tech: ["React", "Socket.io", "Node.js", "PostgreSQL", "JWT"]
-    },
-    {
-        id: '6',
-        title: "Weather Analytics Dashboard",
-        projectImg: mailImg, // Using placeholder image
-        description: "A comprehensive weather analytics platform with historical data, forecasting, and interactive visualizations.",
-        gitUrl: "https://github.com/CodeXGautam/weather-dashboard",
-        liveUrl: "#",
-        tech: ["React", "D3.js", "Weather API", "Charts", "Responsive Design"]
-    }
+    // {
+    //     id: '5',
+    //     title: "Task Management System",
+    //     projectImg: routewizImg, // Using placeholder image
+    //     description: "A collaborative task management application with real-time updates, team collaboration, and project tracking.",
+    //     gitUrl: "https://github.com/CodeXGautam/taskmanager",
+    //     liveUrl: "#",
+    //     tech: ["React", "Socket.io", "Node.js", "PostgreSQL", "JWT"]
+    // },
+    // {
+    //     id: '6',
+    //     title: "Weather Analytics Dashboard",
+    //     projectImg: mailImg, // Using placeholder image
+    //     description: "A comprehensive weather analytics platform with historical data, forecasting, and interactive visualizations.",
+    //     gitUrl: "https://github.com/CodeXGautam/weather-dashboard",
+    //     liveUrl: "#",
+    //     tech: ["React", "D3.js", "Weather API", "Charts", "Responsive Design"]
+    // }
 ];
 
 const AllProjects = () => {
