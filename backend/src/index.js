@@ -4,7 +4,7 @@ import cors from 'cors';
 
 const app = express();
 
-const PORT = 4000; 
+const PORT = process.env.PORT; 
 
 app.use(cors({
   origin:['http://localhost:3000'],
@@ -35,7 +35,6 @@ const contactController = async (req, res) => {
         return res.status(400).json({ error: 'All fields are required.' });
     }
     try {
-        // Configure your transporter (use environment variables for real projects)
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -53,6 +52,7 @@ const contactController = async (req, res) => {
         res.status(200).json({ message: 'Message sent successfully!' });
     } catch (error) {
         res.status(500).json({ error: 'Failed to send message.' });
+        console.log(error);
     }
 };
 
