@@ -101,7 +101,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="peer w-full border-b-2 border-[#E9E4DA] dark:border-dark-border-primary bg-transparent py-3 px-2 text-[#7C5E3C] dark:text-dark-text-primary font-body focus:outline-none focus:border-[#B48A4A] dark:focus:border-dark-warm-primary transition-all duration-500 placeholder-transparent rounded-t-xl"
                         placeholder="Your Name" />
-                    <label htmlFor="name" className="absolute left-2 top-3 text-[#B48A4A] dark:text-dark-warm-primary font-semibold text-sm transition-all duration-500 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-5 peer-focus:text-xs peer-focus:text-[#7C5E3C] dark:peer-focus:text-dark-warm-light bg-[#FAF7F2] dark:bg-white/5 px-1 pointer-events-none">
+                    <label htmlFor="name" className="absolute left-2 -top-5 text-[#B48A4A] dark:text-dark-warm-primary font-semibold text-xs transition-all duration-500 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#B48A4A] dark:peer-placeholder-shown:text-dark-warm-primary peer-focus:-top-5 peer-focus:text-xs peer-focus:text-[#7C5E3C] dark:peer-focus:text-dark-warm-light bg-[#FAF7F2] dark:bg-white/5 px-1 pointer-events-none">
                         Name
                     </label>
                 </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="peer w-full border-b-2 border-[#E9E4DA] dark:border-dark-border-primary bg-transparent py-3 px-2 text-[#7C5E3C] dark:text-dark-text-primary font-body focus:outline-none focus:border-[#B48A4A] dark:focus:border-dark-warm-primary transition-all duration-500 placeholder-transparent rounded-t-xl"
                         placeholder="Your Email" />
-                    <label htmlFor="email" className="absolute left-2 top-3 text-[#B48A4A] dark:text-dark-warm-primary font-semibold text-sm transition-all duration-500 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-5 peer-focus:text-xs peer-focus:text-[#7C5E3C] dark:peer-focus:text-dark-warm-light bg-[#FAF7F2] dark:bg-white/5 px-1 pointer-events-none">
+                    <label htmlFor="email" className="absolute left-2 -top-5 text-[#B48A4A] dark:text-dark-warm-primary font-semibold text-xs transition-all duration-500 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#B48A4A] dark:peer-placeholder-shown:text-dark-warm-primary peer-focus:-top-5 peer-focus:text-xs peer-focus:text-[#7C5E3C] dark:peer-focus:text-dark-warm-light bg-[#FAF7F2] dark:bg-white/5 px-1 pointer-events-none">
                         Email
                     </label>
                 </div>
@@ -119,7 +119,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="peer w-full border-b-2 border-[#E9E4DA] dark:border-dark-border-primary bg-transparent py-3 px-2 text-[#7C5E3C] dark:text-dark-text-primary font-body focus:outline-none focus:border-[#B48A4A] dark:focus:border-dark-warm-primary transition-all duration-500 resize-none placeholder-transparent rounded-t-xl"
                         placeholder="Your Message"></textarea>
-                    <label htmlFor="message" className="absolute left-2 top-3 text-[#B48A4A] dark:text-dark-warm-primary font-semibold text-sm transition-all duration-500 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:-top-5 peer-focus:text-xs peer-focus:text-[#7C5E3C] dark:peer-focus:text-dark-warm-light bg-[#FAF7F2] dark:bg-white/5 px-1 pointer-events-none">
+                    <label htmlFor="message" className="absolute left-2 -top-5 text-[#B48A4A] dark:text-dark-warm-primary font-semibold text-xs transition-all duration-500 peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-[#B48A4A] dark:peer-placeholder-shown:text-dark-warm-primary peer-focus:-top-5 peer-focus:text-xs peer-focus:text-[#7C5E3C] dark:peer-focus:text-dark-warm-light bg-[#FAF7F2] dark:bg-white/5 px-1 pointer-events-none">
                         Message
                     </label>
                 </div>
