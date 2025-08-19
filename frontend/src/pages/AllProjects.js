@@ -1,4 +1,5 @@
-import vocinteraImg from '../images/landingPage.png';
+import vocinteraImg from '../images/landingPage_vocintera.png';
+import agriSetuImg from '../images/agriSetu.png';
 import routewizImg from '../images/welcome_page.png';
 import mailImg from '../images/dashboard.png';
 import chatbotImg from '../images/chatbot.png';
@@ -9,6 +10,17 @@ import { motion } from 'framer-motion';
 const allProjects = [
     {
         id: '1',
+        title: "AgriSetu",
+        projectImg: agriSetuImg,
+        description: "AgriSetu is a comprehensive agricultural ecosystem designed to empower Indian farmers with cutting-edge AI solutions",
+        gitUrl: "https://github.com/CodeXGautam/Agrisetu",
+        liveUrl: "https://agrisetu-1.onrender.com/",
+        tech: ["React", "Node.js", "Fast API", "MongoDb", "Express","Tailwind CSS", "LangChain",
+                "Mistral LLM", "Cloudinary", "Web Speech Api",
+                "React WebCam"]
+    },
+    {
+        id: '2',
         title: "Vocintera",
         projectImg: vocinteraImg,
         description: "A voice enabled AI powered mock interview platform that helps users practice interviews with real-time feedback and analysis.",
@@ -18,7 +30,7 @@ const allProjects = [
             ,"Tailwind CSS"]
     },
     {
-        id: '2',
+        id: '3',
         title: "RouteWizard",
         projectImg: routewizImg,
         description: "An intelligent machine learning powered route optimization platform that finds the most efficient paths for delivery and travel.",
@@ -27,7 +39,7 @@ const allProjects = [
         tech: ["React", "Node.js", "Django", "MongoDb", "Express","Nginx"]
     },
     {
-        id: '3',
+        id: '4',
         title: "ChatBot",
         projectImg: chatbotImg, 
         description: "This web app is built with React.js and styled using Tailwind CSS. It leverages the GEMINI API to handle user queries—users can simply enter their questions, and the app fetches responses through the API.",
@@ -36,7 +48,7 @@ const allProjects = [
         tech: ["React","TailWind CSS", "Google Gemini", "Rest Api"]
     },
     {
-        id: '4',
+        id: '5',
         title: "Mail Tracker Pro",
         projectImg: mailImg,
         description: "A Firefox extension that tracks emails in real time and provides detailed analytics on a comprehensive user dashboard.",
@@ -44,7 +56,6 @@ const allProjects = [
         liveUrl: "https://addons.mozilla.org/addon/mail-tracker-pro/",
         tech: ["Firefox Extension", "JavaScript", "Dashboard", "Real-time Analytics"]
     },
-    
     // {
     //     id: '5',
     //     title: "Task Management System",
