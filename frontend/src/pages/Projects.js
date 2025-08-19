@@ -1,10 +1,20 @@
-import vocinteraImg from '../images/landingPage.png';
+import vocinteraImg from '../images/landingPage_vocintera.png';
+import agriSetuImg from '../images/agriSetu.png';
 import routewizImg from '../images/welcome_page.png';
-import mailImg from '../images/dashboard.png';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
 
 const projects = [
+    {
+        title: "AgriSetu",
+        projectImg: agriSetuImg,
+        description: "AgriSetu is a comprehensive agricultural ecosystem designed to empower Indian farmers with cutting-edge AI solutions",
+        gitUrl: "https://github.com/CodeXGautam/Agrisetu",
+        liveUrl: "https://agrisetu-1.onrender.com/",
+        tech: ["React", "Node.js", "Fast API", "MongoDb", "Express","Tailwind CSS", "LangChain",
+                "Mistral LLM", "Cloudinary", "Web Speech Api",
+                "React WebCam"]
+    },
     {
         title: "Vocintera",
         projectImg: vocinteraImg,
@@ -21,14 +31,6 @@ const projects = [
         gitUrl: "https://github.com/CodeXGautam/routewiz",
         liveUrl: "https://routewiz.onrender.com/",
         tech: ["React", "Node.js", "Django", "MongoDb", "Express","Nginx"]
-    },
-    {
-        title: "Mail Tracker Pro",
-        projectImg: mailImg,
-        description: "A firefox extension which tracks emails in real time and updates on a user dashboard",
-        gitUrl: "https://github.com/CodeXGautam/mail-tracker",
-        liveUrl: "https://addons.mozilla.org/addon/mail-tracker-pro/",
-        tech: ["Firefox", "JavaScript", "Dashboard", "Real-time"]
     },
 ]
 
