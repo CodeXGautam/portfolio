@@ -1,6 +1,7 @@
 import vocinteraImg from '../images/landingPage_vocintera.png';
 import agriSetuImg from '../images/agriSetu.png';
 import routewizImg from '../images/welcome_page.png';
+import studyplannerImg from '../images/StudyPlanner-LandingPage.png';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
 
@@ -11,27 +12,28 @@ const projects = [
         description: "AgriSetu is a comprehensive agricultural ecosystem designed to empower Indian farmers with cutting-edge AI solutions",
         gitUrl: "https://github.com/CodeXGautam/Agrisetu",
         liveUrl: "https://agrisetu-1.onrender.com/",
-        tech: ["React", "Node.js", "Fast API", "MongoDb", "Express","Tailwind CSS", "LangChain",
-                "Mistral LLM", "Cloudinary", "Web Speech Api",
-                "React WebCam"]
+        tech: ["React", "Node.js", "Fast API", "MongoDb", "Express", "Tailwind CSS", "LangChain",
+            "Mistral LLM", "Cloudinary", "Web Speech Api",
+            "React WebCam"]
     },
     {
         title: "Vocintera",
         projectImg: vocinteraImg,
-        description: "A voice enabled AI powered mock interview platform",
+        description: "VocIntera is an AI-powered interview platform that leverages Google Gemini AI to conduct interactive interviews. It provides a seamless experience for candidates to engage in AI-driven interviews and for interviewers to manage interview sessions",
         gitUrl: "https://github.com/CodeXGautam/Vocintera",
         liveUrl: "https://vocintera.onrender.com/",
-        tech: ["React", "Node.js","Express", "Google GEN AI", "OpenRouter AI", "Web Speech Api", "MongoDB"
-            ,"Tailwind CSS"]
+        tech: ["React", "Node.js", "Express", "Google GEN AI", "OpenRouter AI", "Web Speech Api", "MongoDB"
+            , "Tailwind CSS"]
     },
     {
-        title: "RouteWizard",
-        projectImg: routewizImg,
-        description: "An intelligent ml powered route optimization platform",
-        gitUrl: "https://github.com/CodeXGautam/routewiz",
-        liveUrl: "https://routewiz.onrender.com/",
-        tech: ["React", "Node.js", "Django", "MongoDb", "Express","Nginx"]
-    },
+        title: "Study Planner AI",
+        projectImg: studyplannerImg,
+        description: "An AI-powered study planner that helps students break down tasks into actionable study sessions, optimize schedules with Google Calendar, and generate summaries from notes (PDFs/images).",
+        gitUrl: "https://github.com/CodeXGautam/StudyPlanner-AI",
+        liveUrl: "https://studyplanner-ai.onrender.com/",
+        tech: ["React", "Node.js", "Express", "Google Calendar", "OpenRouter AI", "Mistral LLM", "MongoDB"
+            , "Tailwind CSS", "JWT Auth", "Cloudinary"]
+    }
 ]
 
 const Projects = () => {
@@ -41,7 +43,7 @@ const Projects = () => {
             <div className="absolute top-10 left-10 w-20 h-20 bg-amber-200 dark:bg-dark-warm-primary/20 rounded-full opacity-20 dark:opacity-15 animate-pulse blur-sm"></div>
             <div className="absolute bottom-20 right-10 w-16 h-16 bg-yellow-300 dark:bg-dark-warm-secondary/20 rounded-full opacity-30 dark:opacity-20 animate-bounce blur-sm"></div>
             <div className="absolute top-1/2 left-5 w-12 h-12 bg-amber-400 dark:bg-dark-warm-light/20 rounded-full opacity-25 dark:opacity-15 animate-ping blur-sm"></div>
-            
+
             {/* Additional dark mode exclusive background elements */}
             <div className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none">
                 <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-dark-warm-primary/5 rounded-full blur-3xl animate-pulse"></div>
@@ -59,7 +61,7 @@ const Projects = () => {
                 <div className="flex bg-amber-600 dark:bg-dark-warm-primary w-[70%] rounded-2xl h-2 -rotate-3 justify-center items-center mt-2 transition-all duration-500 dark:shadow-dark-warm"></div>
             </motion.h1>
 
-            <motion.div 
+            <motion.div
                 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl'
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -81,7 +83,7 @@ const Projects = () => {
                                 <div className="bg-white dark:bg-white/5 rounded-2xl shadow-xl dark:shadow-dark-lg p-6 border-2 border-amber-100 dark:border-dark-border-accent/30 hover:border-amber-300 dark:hover:border-dark-warm-primary transition-all duration-500 relative overflow-hidden flex flex-col h-full min-h-[480px] backdrop-blur-sm">
                                     {/* Enhanced decorative corner element */}
                                     <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-amber-200 to-yellow-300 dark:from-dark-warm-primary/30 dark:to-dark-warm-secondary/30 rounded-bl-full opacity-60 dark:opacity-40 group-hover:opacity-80 dark:group-hover:opacity-60 transition-all duration-500"></div>
-                                    
+
                                     <div className="relative z-10 flex flex-col flex-1">
                                         <h3 className="text-2xl font-bold text-amber-800 dark:text-dark-warm-light mb-3 font-display transition-all duration-500 dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">{project.title}</h3>
                                         <div className="w-full h-48 rounded-xl overflow-hidden mb-4 shadow-lg dark:shadow-dark-md border dark:border-dark-border-primary/20">
