@@ -157,7 +157,7 @@ const Home = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <a
-                                href="https://drive.google.com/file/d/1EYZxxLDsUeTAwpHXMnM3vnXVnxzW-4JB/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/1Bam8h5yRqJqwC_xB1UjU8yU5l8l1xjKJ/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-4 bg-gradient-to-r from-[#7C5E3C] to-[#B48A4A] dark:from-dark-warm-primary dark:to-dark-warm-secondary text-[#FAF7F2] dark:text-dark-text-primary font-semibold rounded-2xl shadow-lg dark:shadow-dark-warm border-2 border-[#E9E4DA] dark:border-dark-border-accent/50 cursor-pointer transition-all duration-500 group-hover:from-[#B48A4A] group-hover:to-[#7C5E3C] dark:group-hover:from-dark-warm-secondary dark:group-hover:to-dark-warm-tertiary group-hover:shadow-xl dark:group-hover:shadow-dark-warm inline-block backdrop-blur-sm"
