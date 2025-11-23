@@ -3,6 +3,7 @@ import agriSetuImg from '../images/agriSetu.png';
 import routewizImg from '../images/welcome_page.png';
 import mailImg from '../images/dashboard.png';
 import chatbotImg from '../images/chatbot.png';
+import studyplannerImg from '../images/StudyPlanner-LandingPage.png';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
 
@@ -15,40 +16,50 @@ const allProjects = [
         description: "AgriSetu is a comprehensive agricultural ecosystem designed to empower Indian farmers with cutting-edge AI solutions",
         gitUrl: "https://github.com/CodeXGautam/Agrisetu",
         liveUrl: "https://agrisetu-1.onrender.com/",
-        tech: ["React", "Node.js", "Fast API", "MongoDb", "Express","Tailwind CSS", "LangChain",
-                "Mistral LLM", "Cloudinary", "Web Speech Api",
-                "React WebCam"]
+        tech: ["React", "Node.js", "Fast API", "MongoDb", "Express", "Tailwind CSS", "LangChain",
+            "Mistral LLM", "Cloudinary", "Web Speech Api",
+            "React WebCam"]
     },
     {
         id: '2',
         title: "Vocintera",
         projectImg: vocinteraImg,
-        description: "A voice enabled AI powered mock interview platform that helps users practice interviews with real-time feedback and analysis.",
+        description: "VocIntera is an AI-powered interview platform that leverages Google Gemini AI to conduct interactive interviews. It provides a seamless experience for candidates to engage in AI-driven interviews and for interviewers to manage interview sessions",
         gitUrl: "https://github.com/CodeXGautam/Vocintera",
         liveUrl: "https://vocintera.onrender.com/",
-        tech: ["React", "Node.js","Express", "Google GEN AI", "OpenRouter AI", "Web Speech Api", "MongoDB"
-            ,"Tailwind CSS"]
+        tech: ["React", "Node.js", "Express", "Google GEN AI", "OpenRouter AI", "Web Speech Api", "MongoDB"
+            , "Tailwind CSS"]
     },
     {
         id: '3',
+        title: "Study Planner AI",
+        projectImg: studyplannerImg,
+        description: "An AI-powered study planner that helps students break down tasks into actionable study sessions, optimize schedules with Google Calendar, and generate summaries from notes (PDFs/images).",
+        gitUrl: "https://github.com/CodeXGautam/StudyPlanner-AI",
+        liveUrl: "https://studyplanner-ai.onrender.com/",
+        tech: ["React", "Node.js", "Express", "Google Calendar", "OpenRouter AI", "Mistral LLM", "MongoDB"
+            , "Tailwind CSS", "JWT Auth", "Cloudinary"]
+    },
+    {
+        id: '4',
         title: "RouteWizard",
         projectImg: routewizImg,
         description: "An intelligent machine learning powered route optimization platform that finds the most efficient paths for delivery and travel.",
         gitUrl: "https://github.com/CodeXGautam/routewiz",
         liveUrl: "https://routewiz.onrender.com/",
-        tech: ["React", "Node.js", "Django", "MongoDb", "Express","Nginx"]
-    },
-    {
-        id: '4',
-        title: "ChatBot",
-        projectImg: chatbotImg, 
-        description: "This web app is built with React.js and styled using Tailwind CSS. It leverages the GEMINI API to handle user queries—users can simply enter their questions, and the app fetches responses through the API.",
-        gitUrl: "https://github.com/CodeXGautam/Chatbot",
-        liveUrl: "https://codexgautam.github.io/Chatbot/",
-        tech: ["React","TailWind CSS", "Google Gemini", "Rest Api"]
+        tech: ["React", "Node.js", "Django", "MongoDb", "Express", "Nginx"]
     },
     {
         id: '5',
+        title: "ChatBot",
+        projectImg: chatbotImg,
+        description: "This web app is built with React.js and styled using Tailwind CSS. It leverages the GEMINI API to handle user queries—users can simply enter their questions, and the app fetches responses through the API.",
+        gitUrl: "https://github.com/CodeXGautam/Chatbot",
+        liveUrl: "https://codexgautam.github.io/Chatbot/",
+        tech: ["React", "TailWind CSS", "Google Gemini", "Rest Api"]
+    },
+    {
+        id: '6',
         title: "Mail Tracker Pro",
         projectImg: mailImg,
         description: "A Firefox extension that tracks emails in real time and provides detailed analytics on a comprehensive user dashboard.",
@@ -94,8 +105,8 @@ const AllProjects = () => {
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <div className="flex items-center justify-between">
-                        <NavLink 
-                            to="/" 
+                        <NavLink
+                            to="/"
                             className="flex items-center space-x-3 group"
                         >
                             <div className="w-10 h-10 bg-gradient-to-r from-amber-400 to-yellow-400 dark:from-dark-warm-primary dark:to-dark-warm-secondary rounded-full flex items-center justify-center group-hover:from-amber-500 group-hover:to-yellow-500 dark:group-hover:from-dark-warm-secondary dark:group-hover:to-dark-warm-tertiary transition-all duration-500 dark:shadow-dark-warm">
@@ -118,7 +129,7 @@ const AllProjects = () => {
                 <div className="absolute top-1/3 right-20 w-14 h-14 bg-amber-300 dark:bg-dark-warm-primary/15 rounded-full opacity-20 dark:opacity-10 animate-pulse blur-sm"></div>
 
                 {/* Page Title */}
-                <motion.div 
+                <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -134,7 +145,7 @@ const AllProjects = () => {
                 </motion.div>
 
                 {/* Projects Grid */}
-                <motion.div 
+                <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -152,7 +163,7 @@ const AllProjects = () => {
                             <div className="bg-white dark:bg-white/5 rounded-2xl shadow-xl dark:shadow-dark-lg p-6 border-2 border-amber-100 dark:border-dark-border-accent/30 hover:border-amber-300 dark:hover:border-dark-warm-primary transition-all duration-500 relative overflow-hidden flex flex-col h-full min-h-[520px] backdrop-blur-sm">
                                 {/* Enhanced decorative corner element */}
                                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-amber-200 to-yellow-300 dark:from-dark-warm-primary/30 dark:to-dark-warm-secondary/30 rounded-bl-full opacity-60 dark:opacity-40 group-hover:opacity-80 dark:group-hover:opacity-60 transition-all duration-500"></div>
-                                
+
                                 <div className="relative z-10 flex flex-col flex-1">
                                     <h3 className="text-2xl font-bold text-amber-800 dark:text-dark-warm-light mb-3 font-display transition-all duration-500 dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">{project.title}</h3>
                                     <div className="w-full h-48 rounded-xl overflow-hidden mb-4 shadow-lg dark:shadow-dark-md border dark:border-dark-border-primary/20">
@@ -165,7 +176,7 @@ const AllProjects = () => {
                                     <p className="text-gray-700 dark:text-dark-text-secondary mb-4 font-body leading-relaxed flex-1 text-sm transition-all duration-500">
                                         {project.description}
                                     </p>
-                                    
+
                                     {/* Enhanced tech stack tags */}
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         {project.tech.map((tech, techIndex) => (
@@ -177,7 +188,7 @@ const AllProjects = () => {
                                             </span>
                                         ))}
                                     </div>
-                                    
+
                                     {/* Enhanced action buttons */}
                                     <div className="flex gap-3 mt-auto">
                                         <a
@@ -210,7 +221,7 @@ const AllProjects = () => {
                 </motion.div>
 
                 {/* Back to Home Section */}
-                <motion.div 
+                <motion.div
                     className="text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
