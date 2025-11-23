@@ -5,7 +5,7 @@ const Experience = () => {
     return (
         <div className="flex flex-col items-center gap-20 mt-20 justify-center min-h-screen mx-auto w-[65%] max-w-[750px]
          min-w-[270px] relative transition-all duration-500" id="about">
-            
+
             {/* Enhanced background elements for dark mode */}
             <div className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none">
                 <div className="absolute top-10 left-10 w-32 h-32 bg-dark-warm-primary/5 rounded-full blur-3xl animate-pulse"></div>
@@ -24,7 +24,7 @@ const Experience = () => {
                 Experiences
                 <div className="flex bg-amber-600 dark:bg-dark-warm-primary w-[70%] rounded-2xl h-2 -rotate-3 justify-center items-center transition-all duration-500 dark:shadow-dark-warm"></div>
             </motion.h1>
-            
+
             {/* Enhanced Timeline Section */}
             <motion.div
                 className="relative flex flex-col items-center w-full mt-10"
@@ -47,7 +47,7 @@ const Experience = () => {
                     {/* Enhanced Timeline label (date) */}
                     <div className="w-full sm:w-1/2 flex justify-end pr-2 sm:pr-8 mb-2 sm:mb-0">
                         <span className="bg-amber-200 dark:bg-dark-warm-primary/30 text-amber-800 dark:text-dark-warm-light px-3 py-1 rounded-full text-xs font-semibold shadow-md dark:shadow-dark-sm whitespace-nowrap transition-all duration-500 border dark:border-dark-warm-primary/20">
-                            July 2025 - Present
+                            July 2025 - October 2025
                         </span>
                     </div>
                     {/* Enhanced Dot and line */}
@@ -77,8 +77,8 @@ const Experience = () => {
                         >
                             <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">SDE Intern at FlairX </h3>
                             <p className="text-sm text-amber-700 dark:text-dark-warm-primary font-semibold transition-all duration-500">Role: Full Stack Developer</p>
-                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500">Currently working on backend APIs and database optimization.
-                                Learning new technologies and contributing to ongoing projects.</p>
+                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500"> Expanded and optimized company products using React.js, TypeScript, Node.js, and REST APIs.
+                                Collaborated with cross-functional teams in an Agile environment to design and deploy scalable features.</p>
                         </motion.div>
                     </div>
                 </motion.div>
