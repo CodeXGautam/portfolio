@@ -35,8 +35,55 @@ const Experience = () => {
             >
                 {/* Enhanced Vertical line */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-amber-300 dark:bg-dark-warm-primary rounded transition-all duration-500 dark:shadow-dark-warm"></div>
-
+                
                 {/* Enhanced Internship 1 (Current) */}
+                 <motion.div
+                    className="flex w-full mb-16 justify-start items-center relative flex-col sm:flex-row"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    viewport={{ once: true }}
+                >
+                    {/* Enhanced Timeline label (date) */}
+                    <div className="w-full sm:w-1/2 flex justify-end pr-2 sm:pr-8 mb-2 sm:mb-0">
+                        <span className="bg-amber-200 dark:bg-dark-warm-primary/30 text-amber-800 dark:text-dark-warm-light px-3 py-1 rounded-full text-xs font-semibold shadow-md dark:shadow-dark-sm whitespace-nowrap transition-all duration-500 border dark:border-dark-warm-primary/20">
+                            Jan 2026 - Present
+                        </span>
+                    </div>
+                    {/* Enhanced Dot and line */}
+                    <div className="z-10 flex flex-col items-center">
+                        <motion.div
+                            className="w-8 h-8 bg-amber-500 dark:bg-dark-warm-primary rounded-full flex items-center justify-center shadow-lg dark:shadow-dark-warm border-4 border-amber-200 dark:border-dark-warm-secondary transition-all duration-500"
+                            whileHover={{ scale: 1.1 }}
+                            animate={{
+                                boxShadow: [
+                                    "0 0 0 0 rgba(245, 158, 11, 0.4)",
+                                    "0 0 0 10px rgba(245, 158, 11, 0)",
+                                    "0 0 0 0 rgba(245, 158, 11, 0)"
+                                ]
+                            }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                        >
+                            <span className="text-white dark:text-dark-text-primary font-bold transition-colors duration-500">1</span>
+                        </motion.div>
+                        <div className="h-16 w-1 bg-amber-300 dark:bg-dark-warm-primary hidden sm:block transition-all duration-500"></div>
+                    </div>
+                    {/* Enhanced Card */}
+                    <div className="w-full sm:w-1/2 pl-0 sm:pl-8 mt-4 sm:mt-0">
+                        <motion.div
+                            className="bg-white dark:bg-white/5 flex flex-col gap-2 rounded-xl shadow-lg dark:shadow-dark-lg p-6 max-w-md border-l-4 border-amber-500 dark:border-dark-warm-primary mx-auto sm:mx-0 backdrop-blur-sm transition-all duration-500"
+                            whileHover={{ y: -5, scale: 1.02 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">Intern at Monk CI</h3>
+                            <p className="text-sm text-amber-700 dark:text-dark-warm-primary font-semibold transition-all duration-500">Role: Software Engineering Intern</p>
+                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500"> Contributing to the development of the billing service with a focus on scalable backend features.
+                                Gaining hands on experience to Go, Kubernetes and CI/CD in an agile cross-functional team</p>
+                        </motion.div>
+                    </div>
+                </motion.div>
+
+                {/*Internship 2 */}
                 <motion.div
                     className="flex w-full mb-16 justify-start items-center relative flex-col sm:flex-row"
                     initial={{ opacity: 0, x: -50 }}
