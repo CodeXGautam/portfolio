@@ -75,15 +75,14 @@ const Experience = () => {
                             whileHover={{ y: -5, scale: 1.02 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">Intern at Monk CI</h3>
-                            <p className="text-sm text-amber-700 dark:text-dark-warm-primary font-semibold transition-all duration-500">Role: Software Engineering Intern</p>
-                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500"> Contributing to the development of the billing service with a focus on scalable backend features.
-                                Gaining hands on experience to Go, Kubernetes and CI/CD in an agile cross-functional team</p>
+                            <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">Software Engineer Intern at Monk CI</h3>
+                            <p className="text-sm text-amber-700 dark:text-dark-warm-primary font-semibold transition-all duration-500">Role: Software Engineering Intern · Remote</p>
+                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500">Developed and shipped features end-to-end across 5+ backend services including billing, notification, and core services using Go and microservice architectures. Resolved 100+ bugs through Kubernetes rollouts, CI/CD pipelines, PostgreSQL, Redis, and async messaging in an Agile team.</p>
                         </motion.div>
                     </div>
                 </motion.div>
 
-                {/*Internship 2 */}
+                {/* Internship 2 */}
                 <motion.div
                     className="flex w-full mb-16 justify-start items-center relative flex-col sm:flex-row"
                     initial={{ opacity: 0, x: -50 }}
@@ -94,7 +93,7 @@ const Experience = () => {
                     {/* Enhanced Timeline label (date) */}
                     <div className="w-full sm:w-1/2 flex justify-end pr-2 sm:pr-8 mb-2 sm:mb-0">
                         <span className="bg-amber-200 dark:bg-dark-warm-primary/30 text-amber-800 dark:text-dark-warm-light px-3 py-1 rounded-full text-xs font-semibold shadow-md dark:shadow-dark-sm whitespace-nowrap transition-all duration-500 border dark:border-dark-warm-primary/20">
-                            July 2025 - October 2025
+                            July 2025 – October 2025
                         </span>
                     </div>
                     {/* Enhanced Dot and line */}
@@ -111,7 +110,7 @@ const Experience = () => {
                             }}
                             transition={{ duration: 2, repeat: Infinity }}
                         >
-                            <span className="text-white dark:text-dark-text-primary font-bold transition-colors duration-500">1</span>
+                            <span className="text-white dark:text-dark-text-primary font-bold transition-colors duration-500">2</span>
                         </motion.div>
                         <div className="h-16 w-1 bg-amber-300 dark:bg-dark-warm-primary hidden sm:block transition-all duration-500"></div>
                     </div>
@@ -122,15 +121,14 @@ const Experience = () => {
                             whileHover={{ y: -5, scale: 1.02 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">SDE Intern at FlairX </h3>
-                            <p className="text-sm text-amber-700 dark:text-dark-warm-primary font-semibold transition-all duration-500">Role: Full Stack Developer</p>
-                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500"> Expanded and optimized company products using React.js, TypeScript, Node.js, and REST APIs.
-                                Collaborated with cross-functional teams in an Agile environment to design and deploy scalable features.</p>
+                            <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">Software Engineer Intern at FlairX</h3>
+                            <p className="text-sm text-amber-700 dark:text-dark-warm-primary font-semibold transition-all duration-500">Role: Full Stack Developer · Remote</p>
+                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500">Automated interview scheduling by integrating Calendly with an end-to-end workflow using React, Node.js, and TypeScript, cutting scheduling time by 30+ minutes per cycle. Delivered production features and resolved hundreds of tickets in an Agile environment using Jira and Postman.</p>
                         </motion.div>
                     </div>
                 </motion.div>
 
-                {/* Enhanced Internship 2 (Past) */}
+                {/* Internship 3 (Past) */}
                 <motion.div
                     className="flex w-full mb-8 justify-end items-center relative flex-col sm:flex-row-reverse"
                     initial={{ opacity: 0, x: 50 }}
@@ -141,7 +139,7 @@ const Experience = () => {
                     {/* Enhanced Timeline label (date) */}
                     <div className="w-full sm:w-1/2 flex justify-start pl-2 sm:pl-8 mb-2 sm:mb-0">
                         <span className="bg-amber-200 dark:bg-dark-warm-secondary/30 text-amber-800 dark:text-dark-warm-light px-3 py-1 rounded-full text-xs font-semibold shadow-md dark:shadow-dark-sm whitespace-nowrap transition-all duration-500 border dark:border-dark-warm-secondary/20">
-                            Dec 2024 - Feb 2025
+                            Dec 2024 – Feb 2025
                         </span>
                     </div>
                     {/* Enhanced Dot and line */}
@@ -158,7 +156,7 @@ const Experience = () => {
                             }}
                             transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                         >
-                            <span className="text-white dark:text-dark-text-primary font-bold transition-colors duration-500">2</span>
+                            <span className="text-white dark:text-dark-text-primary font-bold transition-colors duration-500">3</span>
                         </motion.div>
                     </div>
                     {/* Enhanced Card */}
@@ -168,10 +166,9 @@ const Experience = () => {
                             whileHover={{ y: -5, scale: 1.02 }}
                             transition={{ duration: 0.3 }}
                         >
-                            <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">Internship : GoBiggie</h3>
-                            <p className="text-sm text-amber-700 dark:text-dark-warm-secondary font-semibold transition-all duration-500">Role: Full Stack Developer</p>
-                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500">Worked on building user interfaces and improving user experience for the main product.
-                                Contributed to several key features and collaborated with a cross-functional team.</p>
+                            <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">Full Stack Developer Intern at goBiggie</h3>
+                            <p className="text-sm text-amber-700 dark:text-dark-warm-secondary font-semibold transition-all duration-500">Role: Full Stack Developer · Remote</p>
+                            <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500">Designed and developed a fully responsive corporate website, deployed to production for client use. Integrated REST APIs, enhanced UI/UX using Tailwind CSS, and optimized for mobile-first experiences.</p>
                         </motion.div>
                     </div>
                 </motion.div>
