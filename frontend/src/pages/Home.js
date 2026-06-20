@@ -54,7 +54,7 @@ const Home = () => {
                         className="w-full h-full object-cover dark:opacity-30 transition-opacity duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-[#FAF7F2]/20 via-[#F6E7C1]/30 to-[#B48A4A]/40 dark:from-dark-bg-primary/80 dark:via-dark-bg-secondary/70 dark:to-dark-bg-tertiary/60"></div>
-                    
+
                     {/* Enhanced dark mode pattern overlay */}
                     <div className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500">
                         <div className="absolute inset-0 bg-gradient-to-br from-dark-warm-primary/10 via-transparent to-dark-warm-secondary/10"></div>
@@ -79,7 +79,7 @@ const Home = () => {
                     animate={{ y: [0, -10, 0], scale: [1, 1.2, 1] }}
                     transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                 />
-                
+
                 {/* Additional dark mode exclusive particles */}
                 <motion.div
                     className="absolute top-1/3 left-1/4 w-2 h-2 bg-dark-warm-light rounded-full opacity-0 dark:opacity-25 shadow-dark-warm"
@@ -157,7 +157,7 @@ const Home = () => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <a
-                                href="https://drive.google.com/file/d/1Bam8h5yRqJqwC_xB1UjU8yU5l8l1xjKJ/view?usp=sharing"
+                                href="https://drive.google.com/file/d/168VfMwq0ycz2UrMPEILichbD733K8B6p/view?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="px-8 py-4 bg-gradient-to-r from-[#7C5E3C] to-[#B48A4A] dark:from-dark-warm-primary dark:to-dark-warm-secondary text-[#FAF7F2] dark:text-dark-text-primary font-semibold rounded-2xl shadow-lg dark:shadow-dark-warm border-2 border-[#E9E4DA] dark:border-dark-border-accent/50 cursor-pointer transition-all duration-500 group-hover:from-[#B48A4A] group-hover:to-[#7C5E3C] dark:group-hover:from-dark-warm-secondary dark:group-hover:to-dark-warm-tertiary group-hover:shadow-xl dark:group-hover:shadow-dark-warm inline-block backdrop-blur-sm"
@@ -195,7 +195,7 @@ const Home = () => {
                         className="w-full h-full object-cover dark:opacity-30 transition-opacity duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-[#FAF7F2]/30 via-[#F6E7C1]/40 to-[#B48A4A]/50 dark:from-dark-bg-primary/85 dark:via-dark-bg-secondary/75 dark:to-dark-bg-tertiary/65"></div>
-                    
+
                     {/* Mobile dark mode pattern overlay */}
                     <div className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500">
                         <div className="absolute inset-0 bg-gradient-to-br from-dark-warm-primary/8 via-transparent to-dark-warm-secondary/8"></div>
