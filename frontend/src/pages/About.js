@@ -32,9 +32,8 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
             >
-                Hi! I'm Himanshu Sharma, a full-stack developer passionate about building scalable, user-focused web apps.
-                I work primarily with the MERN stack and enjoy exploring AI integration using tools like LangChain.<br />
-                I'm always learning and experimenting with new technologies to build better solutions.
+                Hi! I'm Himanshu Sharma, a software engineer with 1+ year of internship experience across backend, full-stack, and cloud-native systems. I'm a final year undergrad at IIT Roorkee, proficient in Go, JavaScript/TypeScript, React.js, Node.js, and Kubernetes.<br />
+                I love building scalable systems and exploring AI integration using tools like LangChain.
             </motion.div>
 
             <motion.div
@@ -84,11 +83,12 @@ const About = () => {
                         </div>
                         <div className="relative z-10 space-y-4">
                             {[
-                                { name: "React.js", level: 90 },
-                                { name: "Next.js", level: 75 },
-                                { name: "Tailwind CSS", level: 85 },
-                                { name: "JavaScript", level: 88 },
-                                { name: "HTML/CSS", level: 92 }
+                                { name: "React.js", level: 92 },
+                                { name: "Next.js", level: 80 },
+                                { name: "Tailwind CSS", level: 88 },
+                                { name: "JavaScript", level: 90 },
+                                { name: "TypeScript", level: 82 },
+                                { name: "HTML/CSS", level: 93 }
                             ].map((skill, index) => (
                                 <div key={skill.name} className="group/item">
                                     <div className="flex items-center justify-between mb-1">
@@ -130,10 +130,12 @@ const About = () => {
                         </div>
                         <div className="relative z-10 space-y-4">
                             {[
-                                { name: "Node.js", level: 85 },
-                                { name: "Express", level: 80 },
+                                { name: "Go", level: 82 },
+                                { name: "Node.js", level: 87 },
+                                { name: "Express.js", level: 83 },
                                 { name: "Django", level: 70 },
-                                { name: "REST APIs", level: 88 }
+                                { name: "REST APIs", level: 90 },
+                                { name: "Redux", level: 75 }
                             ].map((skill, index) => (
                                 <div key={skill.name} className="group/item">
                                     <div className="flex items-center justify-between mb-1">
@@ -175,10 +177,11 @@ const About = () => {
                         </div>
                         <div className="relative z-10 space-y-4">
                             {[
-                                { name: "MongoDB", level: 82 },
-                                { name: "Mongoose", level: 75 },
-                                { name: "JWT", level: 80 },
-                                { name: "OAuth", level: 70 }
+                                { name: "MongoDB", level: 84 },
+                                { name: "PostgreSQL", level: 78 },
+                                { name: "Redis", level: 75 },
+                                { name: "NATS JetStream", level: 68 },
+                                { name: "JWT Auth", level: 82 }
                             ].map((skill, index) => (
                                 <div key={skill.name} className="group/item">
                                     <div className="flex items-center justify-between mb-1">
@@ -220,9 +223,12 @@ const About = () => {
                         </div>
                         <div className="relative z-10 space-y-4">
                             {[
-                                { name: "Nginx", level: 75 },
-                                { name: "Git", level: 90 },
-                                { name: "GitHub", level: 88 }
+                                { name: "Docker", level: 78 },
+                                { name: "Kubernetes", level: 75 },
+                                { name: "GCP", level: 72 },
+                                { name: "GitHub Actions", level: 78 },
+                                { name: "Nginx", level: 74 },
+                                { name: "Git", level: 92 }
                             ].map((skill, index) => (
                                 <div key={skill.name} className="group/item">
                                     <div className="flex items-center justify-between mb-1">
@@ -258,16 +264,16 @@ const About = () => {
                                 <svg className="w-5 h-5 text-[#B48A4A] dark:text-dark-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-[#B48A4A] dark:text-dark-warm-light transition-all duration-500">Data Science</h3>
-                                <p className="text-xs text-[#7C5E3C] dark:text-dark-text-muted font-medium transition-all duration-500">Analytics & ML</p>
+                                <h3 className="text-lg font-bold text-[#B48A4A] dark:text-dark-warm-light transition-all duration-500">Languages & AI</h3>
+                                <p className="text-xs text-[#7C5E3C] dark:text-dark-text-muted font-medium transition-all duration-500">Core & ML</p>
                             </div>
                         </div>
                         <div className="relative z-10 space-y-4">
                             {[
-                                { name: "Python", level: 85 },
-                                { name: "NumPy", level: 80 },
-                                { name: "Pandas", level: 78 },
-                                { name: "Scikit-learn", level: 70 }
+                                { name: "C++", level: 80 },
+                                { name: "Python", level: 82 },
+                                { name: "LangChain", level: 75 },
+                                { name: "Leaflet.js", level: 70 }
                             ].map((skill, index) => (
                                 <div key={skill.name} className="group/item">
                                     <div className="flex items-center justify-between mb-1">
