@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import toast, { Toaster } from 'react-hot-toast';
+import { IoSendOutline } from 'react-icons/io5';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -129,7 +130,7 @@ const Contact = () => {
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                 >
-                    Send Message ✨
+                    Send Message <IoSendOutline className="w-4 h-4 inline-block ml-1" />
                 </motion.button>
                 {/* Enhanced decorative bottom border */}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-2/3 h-2 bg-[#E9E4DA] dark:bg-dark-warm-primary/30 rounded-full blur-sm opacity-60 dark:opacity-40 transition-all duration-500"></div>
