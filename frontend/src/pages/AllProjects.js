@@ -11,9 +11,18 @@ import { motion } from 'framer-motion';
 const allProjects = [
     {
         id: '1',
+        title: "AssetSphere",
+        projectImg: agriSetuImg,
+        description: "A multi-tenant inventory management platform spanning 4+ core modules for organizations to track, book, and manage physical assets. Features RBAC across 3 user roles, asset booking workflows, image storage, email notifications, and real-time analytics via scalable RESTful APIs.",
+        gitUrl: "https://github.com/CodeXGautam/AssetSphere",
+        liveUrl: "https://assetsphere.vercel.app",
+        tech: ["Next.js", "React.js", "Node.js", "MongoDB", "JWT", "Tailwind CSS", "Cloudinary"]
+    },
+    {
+        id: '2',
         title: "AgriSetu",
         projectImg: agriSetuImg,
-        description: "AgriSetu is a comprehensive agricultural ecosystem designed to empower Indian farmers with cutting-edge AI solutions",
+        description: "A full-stack agricultural platform offering crop recommendations, disease detection across 4 crop types and 10+ disease categories, multilingual market insights, an AI chatbot with 24/7 text and voice support across 12+ languages, and a digital marketplace for agri-products.",
         gitUrl: "https://github.com/CodeXGautam/Agrisetu",
         liveUrl: "https://agrisetu-1.onrender.com/",
         tech: ["React", "Node.js", "Fast API", "MongoDb", "Express", "Tailwind CSS", "LangChain",
@@ -21,7 +30,7 @@ const allProjects = [
             "React WebCam"]
     },
     {
-        id: '2',
+        id: '3',
         title: "Vocintera",
         projectImg: vocinteraImg,
         description: "VocIntera is an AI-powered interview platform that leverages Google Gemini AI to conduct interactive interviews. It provides a seamless experience for candidates to engage in AI-driven interviews and for interviewers to manage interview sessions",
@@ -31,7 +40,7 @@ const allProjects = [
             , "Tailwind CSS"]
     },
     {
-        id: '3',
+        id: '4',
         title: "Study Planner AI",
         projectImg: studyplannerImg,
         description: "An AI-powered study planner that helps students break down tasks into actionable study sessions, optimize schedules with Google Calendar, and generate summaries from notes (PDFs/images).",
@@ -41,7 +50,7 @@ const allProjects = [
             , "Tailwind CSS", "JWT Auth", "Cloudinary"]
     },
     {
-        id: '4',
+        id: '5',
         title: "RouteWizard",
         projectImg: routewizImg,
         description: "An intelligent machine learning powered route optimization platform that finds the most efficient paths for delivery and travel.",
@@ -50,7 +59,7 @@ const allProjects = [
         tech: ["React", "Node.js", "Django", "MongoDb", "Express", "Nginx"]
     },
     {
-        id: '5',
+        id: '6',
         title: "ChatBot",
         projectImg: chatbotImg,
         description: "This web app is built with React.js and styled using Tailwind CSS. It leverages the GEMINI API to handle user queries—users can simply enter their questions, and the app fetches responses through the API.",
@@ -59,7 +68,7 @@ const allProjects = [
         tech: ["React", "TailWind CSS", "Google Gemini", "Rest Api"]
     },
     {
-        id: '6',
+        id: '7',
         title: "Mail Tracker Pro",
         projectImg: mailImg,
         description: "A Firefox extension that tracks emails in real time and provides detailed analytics on a comprehensive user dashboard.",
@@ -67,25 +76,8 @@ const allProjects = [
         liveUrl: "https://addons.mozilla.org/addon/mail-tracker-pro/",
         tech: ["Firefox Extension", "JavaScript", "Dashboard", "Real-time Analytics"]
     },
-    // {
-    //     id: '5',
-    //     title: "Task Management System",
-    //     projectImg: routewizImg, // Using placeholder image
-    //     description: "A collaborative task management application with real-time updates, team collaboration, and project tracking.",
-    //     gitUrl: "https://github.com/CodeXGautam/taskmanager",
-    //     liveUrl: "#",
-    //     tech: ["React", "Socket.io", "Node.js", "PostgreSQL", "JWT"]
-    // },
-    // {
-    //     id: '6',
-    //     title: "Weather Analytics Dashboard",
-    //     projectImg: mailImg, // Using placeholder image
-    //     description: "A comprehensive weather analytics platform with historical data, forecasting, and interactive visualizations.",
-    //     gitUrl: "https://github.com/CodeXGautam/weather-dashboard",
-    //     liveUrl: "#",
-    //     tech: ["React", "D3.js", "Weather API", "Charts", "Responsive Design"]
-    // }
 ];
+
 
 const AllProjects = () => {
     return (
