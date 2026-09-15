@@ -4,10 +4,15 @@ import cors from 'cors';
 
 const app = express();
 
-const PORT = process.env.PORT; 
+const PORT = Number(process.env.PORT) || 10000;
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://portfolio-6m89.onrender.com',
+    process.env.FRONTEND_URL
+].filter(Boolean);
 
 app.use(cors({
-  origin:['http://localhost:3000', 'https://portfolio-6m89.onrender.com'],
+    origin: allowedOrigins,
   credentials: true,
   exposedHeaders: ['set-cookie']
 }));
@@ -22,6 +27,9 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/health', (_req, res) => {
+    res.status(200).json({ status: 'ok' });
+});
 
 app.listen(PORT,()=>{
     console.log(`app is listening at ${PORT}`)
@@ -40,7 +48,10 @@ const contactController = async (req, res) => {
             auth: {
                 user: process.env.MAIL_USER,
                 pass: process.env.MAIL_PASS
-            }
+            },
+            connectionTimeout: 10000,
+            greetingTimeout: 10000,
+            socketTimeout: 15000
         });
         const mailOptions = {
             from: process.env.MAIL_USER,
@@ -51,7 +62,7 @@ const contactController = async (req, res) => {
         await transporter.sendMail(mailOptions);
         res.status(200).json({ message: 'Message sent successfully!' });
     } catch (error) {
-        res.status(500).json({ error: 'Failed to send message.' });
+        res.status(502).json({ error: 'Unable to send the message right now.' });
         console.log(error);
     }
 };
