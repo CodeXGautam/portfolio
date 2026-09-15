@@ -24,7 +24,9 @@ const Contact = () => {
             toast.error('All fields are required.');
             return;
         }
-        toast.loading('Sending message...');
+        const loadingToast = toast.loading('Sending message...');
+        const controller = new AbortController();
+        const timeoutId = window.setTimeout(() => controller.abort(), 15000);
 
         try {
             const response = await fetch('https://portfolio-backend-6ti0.onrender.com/contact', {
@@ -32,11 +34,12 @@ const Contact = () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(formData)
+                body: JSON.stringify(formData),
+                signal: controller.signal
             });
 
             const data = await response.json();
-            toast.dismiss(); // Dismiss the loading toast
+            toast.dismiss(loadingToast);
 
             if (response.ok) {
                 toast.success('Message sent successfully!');
@@ -46,17 +49,19 @@ const Contact = () => {
                     message: ''
                 });
             } else {
-                toast.error(`Failed to send message: ${data.message || response.statusText}`);
+                toast.error(`Failed to send message: ${data.error || response.statusText}`);
             }
         } catch (error) {
-            toast.dismiss(); // Dismiss the loading toast
-            toast.error('Error sending message. Please try again later.');
+            toast.dismiss(loadingToast);
+            toast.error(error.name === 'AbortError' ? 'The server took too long to respond.' : 'Error sending message. Please try again later.');
             console.error('Error:', error);
+        } finally {
+            window.clearTimeout(timeoutId);
         }
     };
 
     return(
-            <div className="flex flex-col items-center gap-20 mt-20 justify-center min-h-screen
+            <div className="site-section contact-section flex flex-col items-center gap-20 mt-20 justify-center min-h-screen
              mx-auto w-[65%] max-w-[750px] min-w-[270px] relative overflow-hidden transition-all duration-500" id="contact">
             
             {/* Enhanced background elements for dark mode */}
@@ -76,6 +81,19 @@ const Contact = () => {
                 Get In Touch !
                 <div className="flex bg-amber-600 dark:bg-dark-warm-primary w-[70%] rounded-2xl h-2 -rotate-3 justify-center items-center transition-all duration-500 dark:shadow-dark-warm"></div>
             </motion.h1>
+
+            <motion.div
+                className="contact-intro"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 }}
+                viewport={{ once: true }}
+            >
+                <p>Have a product, system, or idea that deserves careful engineering?</p>
+                <a href="mailto:himanshug1310@gmail.com">himanshug1310@gmail.com</a>
+                <span className="contact-link-separator">or</span>
+                <a href="https://www.linkedin.com/in/himanshu-sharma-72b93b283/" target="_blank" rel="noopener noreferrer">DM me on LinkedIn ↗</a>
+            </motion.div>
 
             {/* Enhanced Creative Contact Form */}
             <motion.form
