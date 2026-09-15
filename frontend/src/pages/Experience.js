@@ -4,33 +4,43 @@ import { motion } from 'framer-motion';
 const experiences = [
     {
         id: 1,
-        title: "Software Engineer Intern at Monk CI",
+        company: "Monk CI",
+        title: "Software Engineer Intern",
         role: "Software Engineering Intern · Remote",
         date: "Jan 2026 – Present",
-        description: "Developed and shipped features end-to-end across 5+ backend services including billing, notification, and core services using Go and microservice architectures. Resolved 100+ bugs through Kubernetes rollouts, CI/CD pipelines, PostgreSQL, Redis, and async messaging in an Agile team.",
-        isPrimary: true,
+        bullets: [
+            "Developed and shipped end-to-end features across 5+ Go microservices, collaborating with cross-functional teams in an Agile environment.",
+            "Wrote unit and integration tests using Testify and integrated 4+ code quality and security tools into CI/CD pipelines, automating testing and vulnerability checks before Kubernetes deployments.",
+            "Implemented event-driven workflows across 5+ services using NATS JetStream and Google Cloud Pub/Sub, with PostgreSQL and Redis for storage and caching."
+        ],
     },
     {
         id: 2,
-        title: "Software Engineer Intern at FlairX",
-        role: "Full Stack Developer · Remote",
-        date: "July 2025 – October 2025",
-        description: "Automated interview scheduling by integrating Calendly with an end-to-end workflow using React, Node.js, and TypeScript, cutting scheduling time by 30+ minutes per cycle. Delivered production features and resolved hundreds of tickets in an Agile environment using Jira and Postman.",
-        isPrimary: true,
+        company: "FlairX",
+        title: "Software Engineer Intern",
+        role: "Software Engineer Intern · Remote",
+        date: "Jul 2025 – Oct 2025",
+        bullets: [
+            "Automated interview scheduling by integrating Calendly with an end-to-end workflow using React.js, Node.js, and TypeScript, reducing scheduling time by 30+ minutes per cycle.",
+            "Delivered production features and resolved hundreds of tickets in an Agile environment using Jira for project tracking and Postman for API testing."
+        ],
     },
     {
         id: 3,
-        title: "Full Stack Developer Intern at goBiggie",
+        company: "goBiggie",
+        title: "Full Stack Developer Intern",
         role: "Full Stack Developer · Remote",
         date: "Dec 2024 – Feb 2025",
-        description: "Designed and developed a fully responsive corporate website, deployed to production for client use. Integrated REST APIs, enhanced UI/UX using Tailwind CSS, and optimized for mobile-first experiences.",
-        isPrimary: false,
+        bullets: [
+            "Designed, developed, and deployed a responsive corporate website for production use.",
+            "Integrated REST APIs and reusable UI components using React.js and Tailwind CSS, optimising the platform for mobile-first experiences."
+        ],
     },
 ];
 
 const Experience = () => {
     return (
-        <div className="flex flex-col items-center gap-20 mt-20 justify-center min-h-screen mx-auto w-[90%] max-w-[900px]
+        <div className="site-section experience-section flex flex-col items-center gap-20 mt-20 justify-center min-h-screen mx-auto w-[90%] max-w-[900px]
          min-w-[270px] relative transition-all duration-500" id="about">
 
             {/* Enhanced background elements for dark mode */}
@@ -113,9 +123,12 @@ const Experience = () => {
                                     whileHover={{ y: -5, scale: 1.02 }}
                                     transition={{ duration: 0.3 }}
                                 >
+                                    <p className="experience-company">{exp.company}</p>
                                     <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light transition-all duration-500">{exp.title}</h3>
-                                    <p className="text-sm text-amber-700 dark:text-dark-warm-primary font-semibold transition-all duration-500">Role: {exp.role}</p>
-                                    <p className="text-gray-700 dark:text-dark-text-secondary transition-all duration-500 leading-relaxed">{exp.description}</p>
+                                    <p className="text-sm text-amber-700 dark:text-dark-warm-primary font-semibold transition-all duration-500">{exp.role}</p>
+                                    <ul className="experience-bullets">
+                                        {exp.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}
+                                    </ul>
                                 </motion.div>
                             </div>
                         </motion.div>
