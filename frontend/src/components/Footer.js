@@ -6,7 +6,7 @@ import { BiLogoGmail } from "react-icons/bi";
 
 const Footer = () =>{
     return(
-        <div className="flex justify-center items-center gap-8 bg-bgColor dark:bg-dark-surface-primary p-5 mt-20 border-t-2 border-amber-200 dark:border-dark-border-accent/30 transition-all duration-500 relative overflow-hidden">
+        <div className="site-footer flex justify-center items-center gap-8 bg-bgColor dark:bg-dark-surface-primary p-5 mt-20 border-t-2 border-amber-200 dark:border-dark-border-accent/30 transition-all duration-500 relative overflow-hidden">
             {/* Enhanced background elements for dark mode */}
             <div className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500">
                 <div className="absolute top-0 left-1/4 w-16 h-16 bg-dark-warm-primary/10 rounded-full blur-2xl"></div>
