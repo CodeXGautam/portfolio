@@ -35,20 +35,21 @@ const projects = [
 
 const Projects = () => {
     return (
-        <div className="flex flex-col items-center gap-20 mt-20 justify-center min-h-screen mx-auto w-[90%] max-w-[1200px] min-w-[270px] relative transition-all duration-500" id="projects">
+        <section className="portfolio-section projects-section" id="projects">
             <motion.h1
-                className="flex flex-col justify-center items-center text-2xl text-amber-700 dark:text-dark-warm-light font-bold font-display sm:text-3xl md:text-4xl lg:text-5xl transition-all duration-500"
+                className="section-heading"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
             >
-                Featured Projects
-                <div className="flex bg-amber-600 dark:bg-dark-warm-primary w-[70%] rounded-2xl h-2 -rotate-3 mt-2 justify-center items-center transition-all duration-500 dark:shadow-dark-warm"></div>
+                <span className="eyebrow">Selected work</span>
+                Featured projects
+                <span className="heading-mark" />
             </motion.h1>
 
             <motion.div
-                className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full'
+                className="pinboard-grid"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -64,38 +65,40 @@ const Projects = () => {
                                 transition={{ duration: 0.6, delay: index * 0.15 }}
                                 viewport={{ once: true }}
                                 whileHover={{ y: -8 }}
-                                className="group"
+                                className="project-card-wrap"
                             >
-                                <div className="bg-[#FAF7F2] dark:bg-white/5 backdrop-blur-sm rounded-2xl shadow-lg dark:shadow-dark-lg p-5 border-2 border-amber-100 dark:border-dark-border-accent/20 hover:border-amber-400 dark:hover:border-dark-warm-primary transition-all duration-400 relative overflow-hidden flex flex-col min-h-[480px]">
-                                    <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-amber-100 to-yellow-50 dark:from-dark-warm-primary/10 dark:to-transparent rounded-bl-3xl opacity-70 group-hover:opacity-100 transition-all duration-400"></div>
-
-                                    <div className="relative z-10 flex flex-col flex-1">
-                                        <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light mb-3 font-display transition-all duration-400">{project.title}</h3>
-                                        <div className="w-full h-44 rounded-xl overflow-hidden mb-4 shadow-md border border-amber-100 dark:border-dark-border-primary/30">
-                                            <img src={project.projectImg} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 dark:opacity-90" />
+                                <article className="project-card">
+                                    <div className="project-image-wrap">
+                                        <img src={project.projectImg} alt={project.title} className="project-image" />
+                                        <span className="project-index">0{index + 1}</span>
+                                    </div>
+                                    <div className="project-card-content">
+                                        <div className="project-title-row">
+                                            <h3>{project.title}</h3>
+                                            <span className="project-arrow"><FiArrowRight /></span>
                                         </div>
-                                        <p className="text-[#7C5E3C] dark:text-dark-text-secondary mb-4 text-sm leading-relaxed flex-1">{project.description}</p>
-                                        <div className="flex flex-wrap gap-1.5 mb-5">
+                                        <p className="project-description">{project.description}</p>
+                                        <div className="project-tags">
                                             {project.tech.map((tech, techIndex) => (
-                                                <span key={techIndex} className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 dark:bg-dark-warm-primary/20 text-amber-700 dark:text-dark-warm-light border border-amber-200 dark:border-dark-warm-primary/30">
+                                                <span key={techIndex}>
                                                     {tech}
                                                 </span>
                                             ))}
                                         </div>
-                                        <div className="flex gap-3 mt-auto">
+                                        <div className="project-actions">
                                             <NavLink to={project.gitUrl} target='_blank'
-                                                className='flex-1 flex justify-center items-center py-2.5 rounded-xl bg-amber-50 dark:bg-white/5 text-amber-800 dark:text-dark-warm-light font-semibold text-sm hover:bg-amber-100 dark:hover:bg-white/10 border border-amber-200 dark:border-dark-border-accent/30 transition-all duration-300 hover:-translate-y-0.5'>
+                                                className='project-link project-link-muted'>
                                             <FiGithub className="w-4 h-4" />
                                                 GitHub
                                             </NavLink>
                                             <NavLink to={project.liveUrl} target='_blank'
-                                                className='flex-1 flex justify-center items-center py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 dark:from-dark-warm-primary dark:to-dark-warm-secondary hover:from-amber-600 hover:to-yellow-600 text-white font-semibold text-sm shadow-md shadow-amber-200 dark:shadow-dark-warm transition-all duration-300 hover:-translate-y-0.5'>
+                                                className='project-link project-link-accent'>
                                                 <FiExternalLink className="w-4 h-4" />
                                                 Live Demo
                                             </NavLink>
                                         </div>
                                     </div>
-                                </div>
+                                </article>
                             </motion.div>
                         )
                     })
@@ -109,11 +112,11 @@ const Projects = () => {
                 viewport={{ once: true }}
             >
                 <NavLink to="/projects_page"
-                    className='inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 dark:from-dark-warm-primary dark:to-dark-warm-secondary hover:from-amber-600 hover:to-yellow-600 text-white font-semibold shadow-lg shadow-amber-200 dark:shadow-dark-warm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl border border-amber-400/30'>
+                    className='outline-button'>
                     View All Projects <FiArrowRight className="w-5 h-5" />
                 </NavLink>
             </motion.div>
-        </div>
+        </section>
     )
 }
 
