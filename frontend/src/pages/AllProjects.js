@@ -4,7 +4,6 @@ import vocinteraImg from '../images/landingPage_vocintera.png';
 import agriSetuImg from '../images/agriSetu.png';
 import routewizImg from '../images/welcome_page.png';
 import mailImg from '../images/dashboard.png';
-import chatbotImg from '../images/chatbot.png';
 import studyplannerImg from '../images/StudyPlanner-LandingPage.png';
 import { NavLink } from 'react-router';
 import { motion } from 'framer-motion';
@@ -65,33 +64,24 @@ const allProjects = [
         liveUrl: "https://studyplanner-ai.onrender.com/",
         tech: ["React", "Node.js", "Express", "Google Calendar", "OpenRouter AI", "Mistral LLM", "MongoDB", "Tailwind CSS", "JWT Auth", "Cloudinary"]
     },
-    {
-        id: '7',
-        title: "ChatBot",
-        projectImg: chatbotImg,
-        description: "A sleek AI chatbot web app built with React.js and Tailwind CSS. Leverages the Gemini API to handle user queries intelligently — users enter their questions and get fast, accurate AI-powered responses.",
-        gitUrl: "https://github.com/CodeXGautam/Chatbot",
-        liveUrl: "https://codexgautam.github.io/Chatbot/",
-        tech: ["React", "Tailwind CSS", "Google Gemini", "REST Api"]
-    },
 ];
 
 const AllProjects = () => {
     return (
-        <div className="min-h-screen relative transition-all duration-500">
+        <div className="projects-page">
             {/* Navigation Header */}
             <motion.div
-                className="z-[1000] sticky top-0 bg-[#F8F5F2]/90 dark:bg-dark-bg-primary/90 backdrop-blur-md border-b border-amber-200 dark:border-dark-border-accent/30 transition-all duration-500"
+                className="projects-nav"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div className="page-width page-nav-inner">
                     <NavLink to="/" className="flex items-center space-x-3 group w-fit">
-                        <div className="w-9 h-9 bg-gradient-to-r from-amber-500 to-yellow-500 dark:from-dark-warm-primary dark:to-dark-warm-secondary rounded-full flex items-center justify-center group-hover:scale-105 transition-all duration-300 shadow-md shadow-amber-200 dark:shadow-dark-warm">
+                        <div className="back-icon">
                             <FiArrowLeft className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-amber-800 dark:text-dark-warm-light font-bold text-lg group-hover:text-amber-600 dark:group-hover:text-dark-warm-primary transition-all duration-300">
+                        <span className="back-label">
                             Back to Home
                         </span>
                     </NavLink>
@@ -99,26 +89,26 @@ const AllProjects = () => {
             </motion.div>
 
             {/* Main Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <main className="page-width projects-main">
                 {/* Page Title */}
                 <motion.div
-                    className="text-center mb-16"
+                    className="page-intro"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-amber-700 dark:text-dark-warm-light font-display mb-4 transition-all duration-500">
-                        My Projects Portfolio
+                    <h1 className="page-title">
+                        A few things I’ve built
                     </h1>
-                    <div className="flex bg-gradient-to-r from-amber-500 to-yellow-500 dark:from-dark-warm-primary dark:to-dark-warm-secondary w-32 sm:w-44 rounded-2xl h-1.5 -rotate-2 mx-auto mb-6 shadow-md shadow-amber-200 dark:shadow-dark-warm"></div>
-                    <p className="text-lg text-[#7C5E3C] dark:text-dark-text-secondary max-w-2xl mx-auto leading-relaxed">
+                    <span className="heading-mark heading-mark-centered" />
+                    <p className="page-subtitle">
                         A collection of projects showcasing full-stack engineering, AI integration, and creative problem-solving.
                     </p>
                 </motion.div>
 
                 {/* Projects Grid */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+                    className="pinboard-grid all-projects-grid"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
@@ -130,30 +120,28 @@ const AllProjects = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.08 * index }}
                             whileHover={{ y: -8 }}
-                            className="group"
+                            className="project-card-wrap"
                         >
-                            <div className="bg-[#FAF7F2] dark:bg-white/5 backdrop-blur-sm rounded-2xl shadow-lg dark:shadow-dark-lg p-5 border-2 border-amber-100 dark:border-dark-border-accent/20 hover:border-amber-400 dark:hover:border-dark-warm-primary transition-all duration-300 relative overflow-hidden flex flex-col min-h-[520px]">
-                                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-amber-100 to-yellow-50 dark:from-dark-warm-primary/10 dark:to-transparent rounded-bl-3xl opacity-70 group-hover:opacity-100 transition-all duration-400"></div>
-
-                                <div className="relative z-10 flex flex-col flex-1">
-                                    <h3 className="text-xl font-bold text-amber-800 dark:text-dark-warm-light mb-3 font-display">{project.title}</h3>
-                                    <div className="w-full h-44 rounded-xl overflow-hidden mb-4 shadow-sm border border-amber-100 dark:border-dark-border-primary/30">
+                            <article className="project-card">
+                                    <div className="project-image-wrap">
                                         <img
                                             src={project.projectImg}
                                             alt={project.title}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 dark:opacity-90"
+                                            className="project-image"
                                         />
+                                        <span className="project-index">{String(index + 1).padStart(2, '0')}</span>
                                     </div>
-                                    <p className="text-[#7C5E3C] dark:text-dark-text-secondary mb-4 text-sm leading-relaxed flex-1">
+                                    <div className="project-card-content">
+                                    <div className="project-title-row"><h3>{project.title}</h3><span className="project-arrow"><FiExternalLink /></span></div>
+                                    <p className="project-description">
                                         {project.description}
                                     </p>
 
                                     {/* Tech tags */}
-                                    <div className="flex flex-wrap gap-1.5 mb-5">
+                                    <div className="project-tags">
                                         {project.tech.map((tech, techIndex) => (
                                             <span
                                                 key={techIndex}
-                                                className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 dark:bg-dark-warm-primary/20 text-amber-700 dark:text-dark-warm-light border border-amber-200 dark:border-dark-warm-primary/30"
                                             >
                                                 {tech}
                                             </span>
@@ -161,12 +149,12 @@ const AllProjects = () => {
                                     </div>
 
                                     {/* Action buttons */}
-                                    <div className="flex gap-3 mt-auto">
+                                    <div className="project-actions">
                                         <a
                                             href={project.gitUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 flex justify-center items-center py-2.5 rounded-xl bg-amber-50 dark:bg-white/5 text-amber-800 dark:text-dark-warm-light font-semibold text-sm hover:bg-amber-100 dark:hover:bg-white/10 border border-amber-200 dark:border-dark-border-accent/30 transition-all duration-300 hover:-translate-y-0.5"
+                                            className="project-link project-link-muted"
                                         >
                                             <FiGithub className="w-4 h-4" />
                                             GitHub
@@ -176,19 +164,19 @@ const AllProjects = () => {
                                                 href={project.liveUrl}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex-1 flex justify-center items-center py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 dark:from-dark-warm-primary dark:to-dark-warm-secondary hover:from-amber-600 hover:to-yellow-600 text-white font-semibold text-sm shadow-md shadow-amber-200 dark:shadow-dark-warm transition-all duration-300 hover:-translate-y-0.5"
+                                                className="project-link project-link-accent"
                                             >
                                                 <FiExternalLink className="w-4 h-4" />
                                                 Live Demo
                                             </a>
                                         ) : (
-                                            <div className="flex-1 flex justify-center items-center py-2.5 rounded-xl bg-amber-50 dark:bg-white/5 text-amber-400 font-semibold text-sm cursor-not-allowed border border-amber-100 dark:border-dark-border-primary/20">
+                                            <div className="project-link project-link-muted">
                                                 Coming Soon
                                             </div>
                                         )}
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         </motion.div>
                     ))}
                 </motion.div>
@@ -202,15 +190,15 @@ const AllProjects = () => {
                 >
                     <NavLink
                         to="/"
-                        className="inline-flex items-center gap-3 px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 dark:from-dark-warm-primary dark:to-dark-warm-secondary hover:from-amber-600 hover:to-yellow-600 text-white font-semibold shadow-lg shadow-amber-200 dark:shadow-dark-warm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl text-lg"
+                        className="outline-button"
                     >
                         <FiArrowLeft className="w-5 h-5" />
                         <span>Back to Portfolio</span>
                     </NavLink>
                 </motion.div>
-            </div>
+            </main>
 
-            <div className="h-20"></div>
+            <div className="page-bottom-space"></div>
         </div>
     );
 };
