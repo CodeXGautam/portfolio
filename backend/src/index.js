@@ -31,9 +31,6 @@ app.get('/health', (_req, res) => {
     res.status(200).json({ status: 'ok' });
 });
 
-app.listen(PORT, () => {
-    console.log(`app is listening at ${PORT}`)
-})
 
 import nodemailer from 'nodemailer';
 
@@ -78,3 +75,7 @@ const contactController = async (req, res) => {
 };
 
 app.post('/contact', contactController);
+
+app.listen(PORT, () => {
+    console.log(`app is listening at ${PORT}`)
+})
